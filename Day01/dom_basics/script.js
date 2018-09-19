@@ -1,2 +1,8 @@
-let name = window.prompt('What is your name ? ')
-document.body.append('Hello ' + name + ' !!!')
+let newtask = document.getElementById('newtask')
+let addtask = document.getElementById('addtask')
+let tasklist = document.getElementById('tasklist')
+
+addtask.onclick = function () {
+  let task = newtask.value
+  tasklist.innerHTML += "<li>" + task + "</li>"
+}
