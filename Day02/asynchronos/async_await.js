@@ -39,19 +39,15 @@ function uploadFile(fileName) {
 
 }
 
-let file = downloadFile('http://website.com/file.mp3')
-  .then(compressFile)
-  .then(uploadFile)
-  .then(console.log)
-  .catch((err) => {
+async function task() {
+  try {
+    let file = await downloadFile('http://website.com/file.jpg')
+    let zip = await compressFile(file)
+    await uploadFile(zip)
+    console.log('All done')
+  } catch (err) {
     alert(err)
-  })
+  }
+}
 
-
-// .then((fileName) => {
-//   console.log('after download over')
-//   compressFile(fileName)
-//     .then((compressedFile) => {
-//       uploadFile(compressedFile)
-//     })
-// })
+task()
