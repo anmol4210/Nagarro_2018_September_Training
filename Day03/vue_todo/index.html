@@ -16,7 +16,8 @@
     <button @click="addtask">Add</button>
     <ul>
       <li v-for="task in tasklist">
-        <span>{{task.name}}</span>
+        <strike v-if="task.done">{{task.name}}</strike>
+        <span v-else>{{task.name}}</span>
         <input v-model="task.done" type="checkbox">
       </li>
     </ul>
@@ -26,7 +27,23 @@
       el: '#app',
       data: {
         newtask: '',
-        tasklist: []
+        tasklist: [{
+            name: 'asdsad',
+            done: true
+          },
+          {
+            name: 'fhhf',
+            done: false
+          },
+          {
+            name: 'yukyuk',
+            done: true
+          },
+          {
+            name: 'xcvxv',
+            done: false
+          },
+        ]
       },
       methods: {
         addtask() {
