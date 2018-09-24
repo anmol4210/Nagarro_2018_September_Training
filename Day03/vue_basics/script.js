@@ -1,7 +1,8 @@
 let app = new Vue({
   el: '#app',
   data: {
-    title: 'Todo List'
+    title: 'Todo List',
+    username: ''
   },
   methods: {
     titleUpperCase() {
