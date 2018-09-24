@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .done {
+      text-decoration: line-through;
+      color: grey;
+    }
+  </style>
   <title>Document</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
@@ -16,8 +22,7 @@
     <button @click="addtask">Add</button>
     <ul>
       <li v-for="task in tasklist">
-        <strike v-if="task.done">{{task.name}}</strike>
-        <span v-else>{{task.name}}</span>
+        <span :class="{done: task.done}">{{task.name}}</span>
         <input v-model="task.done" type="checkbox">
       </li>
     </ul>
