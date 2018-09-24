@@ -6,7 +6,7 @@ npm install -g http-server
 
 - Single Page Applications
 
-## Components
+### Components
 
 ```html
 <my-clock time="0900"></my-clock>
@@ -16,6 +16,14 @@ npm install -g http-server
 <task taskname="asdasd" done></task>
 ```
 
-## Routing
+### Routing
 
-## State Management
+### State Management
+
+## Vue JS
+
+Install CLI
+
+```
+npm install -g @vue/cli
+```
