@@ -15,7 +15,10 @@
     <input v-model="newtask">
     <button @click="addtask">Add</button>
     <ul>
-      <li v-for="task in tasklist">{{task.name}}</li>
+      <li v-for="task in tasklist">
+        <span>{{task.name}}</span>
+        <input v-model="task.done" type="checkbox">
+      </li>
     </ul>
   </div>
   <script>
