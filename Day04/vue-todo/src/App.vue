@@ -4,11 +4,10 @@
       <div class="navbar-brand">
         TodoList
       </div>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link to="/">Home</router-link>
-        </li>
-      </ul>
+      <div class="navbar-nav mr-auto">
+        <router-link class="nav-item" to="/">Home</router-link>
+        <router-link class="nav-item" to="/about">About</router-link>
+      </div>
     </nav>
     <div class="container">
       <router-view />
