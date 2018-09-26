@@ -1,6 +1,7 @@
-export function sayHello() {
-  console.log('Hello World!')
-}
+import {
+  sayHello
+} from './hello.js'
+
 
 window.onload = function () {
   document.getElementById('btn').onclick = sayHello
