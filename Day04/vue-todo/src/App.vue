@@ -1,10 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        TodoList
+      </div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <router-link to="/">Home</router-link>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <router-view />
     </div>
-    <router-view />
   </div>
 </template>
 
