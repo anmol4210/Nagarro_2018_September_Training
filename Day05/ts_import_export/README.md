@@ -48,6 +48,19 @@ npm install -D typescript
 }
 ```
 
+# Using async-await syntax
+This needs promises (which is in ES2015)
+Add that to tsconfig "lib" option
+
+```json
+{
+  "lib": [
+    "dom", // allows console statements
+    "es2015" // introduces Promises
+  ]
+}
+```
+
 # Reduce Generated Code
 
 ## 1. Install tslib
