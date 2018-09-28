@@ -47,3 +47,20 @@ npm install -D typescript
   }
 }
 ```
+
+# Reduce Generated Code
+
+## 1. Install tslib
+
+```
+npm install tslib
+```
+
+## 2. Turn on importHelpers
+
+tsconfig.json
+```json
+{
+  "importHelpers": true
+}
+```

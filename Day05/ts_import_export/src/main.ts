@@ -1,4 +1,4 @@
-import { fun1, a } from './lib'
+import { fun1, a, doSomething } from './lib'
 import lib from './lib'
 import * as libStar from './lib'
 
@@ -9,3 +9,8 @@ console.log(a)
 console.log(lib.x)
 
 libStar.fun1()
+
+async function task () {
+  await doSomething()
+}
+task()

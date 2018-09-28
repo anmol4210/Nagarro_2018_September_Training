@@ -9,6 +9,10 @@ function fun2() {
   console.log('fun2')
 }
 
+export async function doSomething() {
+  return 10
+}
+
 export default {
   x: 23
 }
