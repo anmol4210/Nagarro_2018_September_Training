@@ -8,3 +8,7 @@ export const a = 10
 function fun2() {
   console.log('fun2')
 }
+
+export default {
+  x: 23
+}
