@@ -1,4 +1,4 @@
-import {Special} from './decorators'
+import { Special } from './decorators'
 
 @Special
 class MyClass {
