@@ -13,4 +13,9 @@ namespace funreturns {
 
   }
 
+  function f3(y?: number): void {
+    let x = y
+    return
+  }
+
 }
