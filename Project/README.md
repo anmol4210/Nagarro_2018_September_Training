@@ -36,6 +36,19 @@ Adding these gets you extra points
 
  - Support for tags, and seeing articles of only particular tag
  - Setting articles as favourites and browsing own favourite articles
+ 
+## Submission
+
+### Deadline 
+22 October 2018
+
+### Format 
+Submit both the deployment and the code.
+
+- Upload code to a Github repository
+- Deploy the project via `surge.sh` or `app.netlify.com/drop` or `now.sh` (now.sh has hash-#-free history API routes)
+- Send an email with link to both source code and deployed project
+- Note that commit message names, code cleanliness in Github repo factors into marking scheme
 
 ## References
 Real World project README - https://realworld.io
