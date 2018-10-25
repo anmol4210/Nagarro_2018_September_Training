@@ -13,6 +13,11 @@ const db = new Sequelize({
   storage: __dirname + '/test.db',
 })
 
+/*
+  db.define() creates a table
+  1st arg = name of table
+  2nd arg = definition (contains list of columns)
+ */
 const Task = db.define('task', {
   name: {
     type: DT.STRING(50),
@@ -43,12 +48,29 @@ async function init () {
 
 
 async function writeTasks () {
-  await Task.create({
-    name: 'this is a task',
-    priority: 3
+  const task = await Task.create({
+    name: 'this is one more task',
+    priority: 2
   })
+  console.log(task)
+  console.log('==============')
+  console.log('==============')
+  console.log('==============')
+
+  task.priority = 5
+  console.log(task)
+  console.log('==============')
+  console.log('==============')
+  console.log('==============')
+
+  await task.save()
+  console.log(task)
+
 }
 
+// doAll makes sure init() and writeTasks()
+// run one after another instead of
+// starting parallelly.
 async function doAll () {
   await init()
   await writeTasks()
