@@ -6,7 +6,9 @@ const route = Router()
 
 route.get('/', async (req, res) => {
 
-  const products = await Product.findAll()
+  const products = await Product.findAll({
+    include: [Vendor]
+  })
   res.status(200).json(products)
 
 })
